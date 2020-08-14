@@ -204,7 +204,7 @@ body{
     font-size: 64px;
     line-height: 96px;
     text-align: center;
-    color: #fff;
+    color: #000;
 }
 .boxs{
     position: absolute;
@@ -540,6 +540,7 @@ background: grey;
         width: 5px;
       }
 }
+/*
 .fullscreen-bg {
     position: absolute;
     top: 0;
@@ -556,3 +557,4 @@ background: grey;
     width: auto;
     height: auto;
 }
+*/
