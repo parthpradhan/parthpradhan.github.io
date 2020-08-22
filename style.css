@@ -29,7 +29,7 @@ body{
     background: #000000;
 }
 /* FIRST */
-
+/*
 .cover{
     height: 100vh;
     width: 100%;
@@ -38,6 +38,7 @@ body{
     height: 100%;
     width: 100%;
 }
+*/
 .container{
     position: absolute;
     width: 366px;
@@ -79,28 +80,39 @@ body{
 
     color: #FFFFFF;
 }
-.nav-btn1{
+.fullscreen-bg {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.fullscreen-bg__video {
     position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 0;
+}
+.nav-buttons{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.nav-btn1{
+    position: relative;
     width: 300px;
     height: 57px;
-    left: 790px;
     top: 12px;
     margin-right: 145px;
     border-radius: 10px;
 
     background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(4px);
-}
-.nav-btn3{
-    position: absolute;
-    width: 112px;
-    height: 57px;
-    right: 0px;
-    top: 12px;
-    margin-right: 145px;
-    border-radius: 10px;
-
-    background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(4px);
 }
 .nav-btn1 h2{
@@ -116,26 +128,13 @@ body{
 
     color: #000000;
 }
-.nav-btn3 h2{
-    position: absolute;
-    width: 112px;
-    height: 57px;
-
-    font-style: normal;
-    font-weight: 300;
-    font-size: 36px;
-    line-height: 54px;
-    text-align: center;
-
-    color: #fff;
-}
 .nav-btn2,.nav-btn4{
     position: absolute;
     width: 112px;
     height: 57px;
     right: 0;
     top: 12px;
-    margin-right: 15px;
+    margin-right: 5px;
     border-radius: 10px;
     align-content: center;
 
@@ -159,7 +158,7 @@ body{
     z-index: 5;
     backdrop-filter: blur(4px);
     transform: translateX(110%);
-    transition: transform 0.5s ease-in;
+    transition: transform 0.35s ease-in;
  
 }
 .nav-links{
@@ -169,9 +168,13 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
+}
+.nav-links li a:hover{
+    font-size: 40px;
+    font-weight: 300;
 }
 .nav-active{
+    display: block;
     transform: translateX(0%);
 }
 .nav ul li a{
@@ -204,7 +207,7 @@ body{
     font-size: 64px;
     line-height: 96px;
     text-align: center;
-    color: #000;
+    color: #fff;
 }
 .boxs{
     position: absolute;
@@ -294,7 +297,7 @@ body{
 	width: 200px;
 	height: 200px;
 	transform-style: preserve-3d;
-	animation: animate 7.5s linear infinite;
+	animation: animate 10.5s linear infinite;
 
 }
 @keyframes animate{
@@ -402,7 +405,7 @@ color: #FFFFFF;
 .location{
     position: absolute;
     right: 0;
-    top: 1;
+    top: 0;
     margin-right: 1%;
 font-style: normal;
 font-weight: 100;
@@ -428,7 +431,8 @@ color: #FFFFFF;
 .social{
     position: absolute;
     width: 100%;
-    padding-top: 35px;
+    margin-top: 24px;
+    padding: 0.5%;
     font-style: normal;
     font-weight: 200;
     font-size: 24px;
@@ -437,7 +441,11 @@ color: #FFFFFF;
     
     color: #FFFFFF;
 }
-
+.social:hover{
+    background-color: white;
+    color: #000;
+    width: 100%;
+}
 ul{
     list-style: none;
     display: flex;
@@ -468,6 +476,8 @@ background : black;
 background: grey; 
 }
 
+/* MOBILE*/
+
 @media screen and (max-width:768px){
     #first,#second,#three,#four,#footer{
         width: 100%;
@@ -478,12 +488,36 @@ background: grey;
     .container{
         width: 100%;
     }
-    .nav-btn1,.nav,.nav-btn2{
+    .fullscreen-bg {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .title{
+        color: #000;
+    }
+    .fullscreen-bg__video {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        z-index: 0;
+    }
+    .nav-btn1,.nav-btn2{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+    }
+    .nav-btn1{
+        background-color: black;
     }
     .nav{
-        width: 110%;
+        width: 100%;
     }
     .box{
         width: 100px;
@@ -540,21 +574,3 @@ background: grey;
         width: 5px;
       }
 }
-/*
-.fullscreen-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -100;
-}
-
-.fullscreen-bg__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-}
-*/
