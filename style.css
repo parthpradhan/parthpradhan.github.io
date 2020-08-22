@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100&display=swap');
 *{
     margin:0;
     padding: 0;
@@ -12,14 +11,9 @@ body{
     font-family: 'Poppins',sans-serif;
     overflow-x: hidden;
 }
-#first, #second,#four{
+#first, #second,#three,#four{
     height: 100vh;
-    width: 105%;
-}
-#three{
-    height: 100vh;
-    width: 105%;
-    background: linear-gradient(325deg, rgba(0,0,0,1) 0%, rgba(29,21,21,1) 35%, rgba(0,0,0,1) 100%);
+    width: 100%;
 }
 #footer{
     position: relative;
@@ -29,16 +23,7 @@ body{
     background: #000000;
 }
 /* FIRST */
-/*
-.cover{
-    height: 100vh;
-    width: 100%;
-}
-.cover img{
-    height: 100%;
-    width: 100%;
-}
-*/
+
 .container{
     position: absolute;
     width: 366px;
@@ -199,103 +184,99 @@ body{
 
 /* SECOND */
 
-.title{
+#second{
+    background-image: url('img/cover.jpg');
+    background-size: cover;
+}
+.title-box{
     position: relative;
-    width: 740px;
-    height: 73px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    top: 30px;
-    font-style: normal;
+    height: 73px;
+    top: 20px;
+    backdrop-filter: blur(4.5px);
+}
+.title{
     font-weight: 300;
     font-size: 64px;
     line-height: 96px;
     text-align: center;
     color: #fff;
+    
 }
-.boxs{
-    position: absolute;
+.big-container{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 4%;
+}
+.intro-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 590px;
     height: 419px;
-    left: 55px;
-    top: 780px;
-    
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(1.5px);
+    border-radius: 25px;
+    margin-left: 2%;
+}
+.intro{
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
     line-height: 36px;
     text-align: center;
-    
     color: #000000;
 }
-#me{
-    position: absolute;
+.me{
+    position: relative;
     width: 327px;
     height: 404px;
-    right: 0;
-    margin-right: 130px;
-    top: 760px;
     border-radius: 30px;
-    z-index: 1;
-}
-#big{
-    position: absolute;
-    width: 639px;
-    height: 618.07px;
-    right: 0;
-    top: 477px;
-    
-    opacity: 0.55;
-    transform: rotate(-0.2deg);
-}
-#big1{
-    position: absolute;
-    width: 600px;
-    height: 618.07px;
-    left: 0;
-    top: 720px;
-    
-    opacity: 0.3;
-    transform: rotate(179.74deg);
-
 }
 
 /* THIRD */
 
-.gallery-heading{
+#three{
+    background: linear-gradient(325deg, rgba(0,0,0,1) 0%, rgba(29,21,21,1) 35%, rgba(0,0,0,1) 100%);
+}
+.gallery-heading-box{
     position: relative;
     width: 100%;
     margin-top: 2px;
-    font-style: normal;
+}
+.gallery-heading{
     font-weight: 200;
     font-size: 64px;
     line-height: 96px;
     text-align: center;
-    
-    color: #FFFFFF;
-    
+    color: #fff;
 }
-.gallery-txt{
+.gallery-text-box{
     position: relative;
     width: 100%;
-    
-    font-family: Poppins;
-    font-style: normal;
+    margin-top: 20px;
+}
+.gallery-text{
     font-weight: 200;
     font-size: 24px;
     line-height: 36px;
     text-align: center;
-    margin-top: 20px;
-    
-    color: #FFFFFF;
-    
+    color: #fff;
 }
-.box-container{
+.image-box-container{
     display: flex;
 	justify-content: center;
     align-items: center;
     margin-top: 150px;
 }
-.box{
+.image-box{
 	position: relative;
 	width: 200px;
 	height: 200px;
@@ -312,7 +293,7 @@ body{
 	}
 
 }
-.box span{
+.image-box span{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -323,7 +304,7 @@ body{
 	transform: rotateY(calc(var(--i)* 45deg)) translateZ(300px);
 	-webkit-box-reflect :below 0px linear-gradient(transparent,transparent,#0004);
 }
-.box span img{
+.image-box span img{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -335,49 +316,51 @@ body{
 
 /* FOURTH */
 
-.project-heading{
+.project-heading-box{
     position: relative;
     width: 100%;
-    margin-top: 10px;
-    font-style: normal;
+}
+.project-heading{
     font-weight: 300;
     font-size: 64px;
     line-height: 96px;
     text-align: center;
-
-    color: #000000;
+    color: #000;
 }
-.boxz{
-
-    width: 912px;
-    height: 161px;
-    margin-left: 160px;
-    margin-top: 20px;
-    font-style: normal;
+.description-box{
+    margin-left: 8%;
+    width: 80%;
+    height: 60vh;
+}
+.description{
     font-weight: 300;
     font-size: 24px;
     line-height: 36px;
     text-align: center;
-
     color: #000000;
 }
-.game-btn{
-    
-    margin-top: 40px;
-    width: 579px;
-    height: 66px;
+.game-link-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    position: relative;
+    width: 35%;
+    height: 10vh;
     padding: 2%;
-    font-style: normal;
+    background: black;
+}
+.game-link{
     font-weight: 200;
     font-size: 24px;
     line-height: 36px;
     text-align: center;
     letter-spacing: 4px;
     color: #FFFFFF;
-    background: black;
-    transition: 0.2s;
+    transition: 0.2s ease-in-out;
 }
-.game-btn:hover{
+.game-link-box:hover{
     background-color: white;
     color: black;
     font-weight: 300;
@@ -409,7 +392,7 @@ color: #FFFFFF;
     position: absolute;
     right: 0;
     top: 0;
-    margin-right: 1%;
+    margin-right: 2%;
 font-style: normal;
 font-weight: 100;
 font-size: 36px;
@@ -491,78 +474,55 @@ background: grey;
     .container{
         width: 100%;
     }
-    .fullscreen-bg {
-        height: 100vh;
-        width: 100%;
-        background-color: #000;
-        position: relative;
-        overflow: hidden;
-    }
-    .title{
-        color: #000;
-    }
-    .fullscreen-bg__video {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        -webkit-transform: translate(-50%,-50%);
-        -moz-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-        transform: translate(-50%,-50%);
-        z-index: 0;
-    }
+    
     .nav-btn1,.nav-btn2{
         display: flex;
         justify-content: space-around;
     }
     .nav-btn1{
-        background-color: black;
+        background-color: transparent;
     }
     .nav{
         width: 100%;
     }
-    .box{
+    .me{
+        display: none;
+    }
+    .image-box{
         width: 100px;
         height: 100px;
     }
-    {
-        display: none;
-    }
     .project-heading,.title{
-        font-size: 36px;
+        font-size: 40px;
     }
-    #me{
-        display: none;
+    .title{
+        color: #000;
     }
-    .boxs{
-        position: relative;
-        left: 20px;
-        top: 70px;
+    .intro-box{
+        height: 80%;
         width: 90%;    
     }
-    .boxs p{
-        
-        font-size: 16px;
+    .intro{
+        font-size: 15px;
     }
-    .boxz{
+    .description-box{
         position: relative;
-        height: 100%;
+        height: 75%;
         width: 100%;
         margin: 6px;
-        
         align-items: center;
-   
     }
-    .boxz p{
-
+    .description{
         height: 60%;
         font-size: 14px;
         padding: 2%;
     }
-    .game-btn{
-        display: none;
+    .game-link-box{
+        height: 35px;
+        width: 55%;
+    }
+    .game-link{
+        font-size: 12px;
     }
     .name,.mail,.location,.social{
         font-size: 24px;
