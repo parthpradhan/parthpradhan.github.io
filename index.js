@@ -34,7 +34,7 @@ tabs.forEach(tab => {
           headColor.classList.remove('is-black','is-link','is-success');
           headColor.classList.add('is-light');
         }
-        if(box.getAttribute('id') === "taskify")
+        if(box.getAttribute('id') === "autodraw")
         {
           headColor.classList.remove('is-primary','is-success','is-light');
           headColor.classList.add('is-link');
