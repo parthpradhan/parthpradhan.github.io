@@ -21,23 +21,23 @@ tabs.forEach(tab => {
       if (box.getAttribute('id') === target) {
         if(box.getAttribute('id') === "worldxtime")
         {
-          headColor.classList.remove('is-black','is-link','is-light');
+          headColor.classList.remove('is-black','is-primary','is-light');
           headColor.classList.add('is-success');
         }
         if(box.getAttribute('id') === "fps")
         {
-          headColor.classList.remove('is-success','is-link','is-light');
+          headColor.classList.remove('is-success','is-primary','is-light');
           headColor.classList.add('is-black');
         }
         if(box.getAttribute('id') === "spamy")
         {
-          headColor.classList.remove('is-black','is-link','is-success');
+          headColor.classList.remove('is-black','is-primary','is-success');
           headColor.classList.add('is-light');
         }
         if(box.getAttribute('id') === "autodraw")
         {
           headColor.classList.remove('is-primary','is-success','is-light');
-          headColor.classList.add('is-link');
+          headColor.classList.add('is-primary');
         }
         
         box.classList.remove('is-hidden');
